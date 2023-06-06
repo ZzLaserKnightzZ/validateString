@@ -22,14 +22,14 @@ class Validation {
 
     private AllValidation?: CValidationType[] = [];
     //isuppercase islowercase startwidth endwith
-    MinLength(min: number = 1, error = "ตัวอักษรต่ำสุด 1 ตัว") {
+    MinLength(min: number = 1, error = "ตัวอักษรต่ำสุด ") {
 
-        let v = new CValidationType(EValidationType.MIN_LENGTH, min, error)
+        let v = new CValidationType(EValidationType.MIN_LENGTH, min, error+min)
         this.AllValidation?.push(v);
         return this;
     }
-    MaxLength(max: number, error = "ตัวอักษรสูงสุด 13 ตัว") {
-        let v = new CValidationType(EValidationType.MAX_LENGTH, max, error)
+    MaxLength(max: number, error = "ตัวอักษรสูงสุด ") {
+        let v = new CValidationType(EValidationType.MAX_LENGTH, max, error+max)
         this.AllValidation?.push(v);
         return this;
     }
@@ -38,13 +38,13 @@ class Validation {
         this.AllValidation?.push(v);
         return this;
     }
-    StartWidth(start:string,error="ต้องเริ่มต้นด้วย"){
-        let v = new CValidationType(EValidationType.START_WIDTH, start, error)
+    StartWidth(start:string,error="ต้องเริ่มต้นด้วย "){
+        let v = new CValidationType(EValidationType.START_WIDTH, start, error+start)
         this.AllValidation?.push(v);
         return this;
     }
-    EndWidth(end:string,error="ต้องลงท้ายด้วย"){
-        let v = new CValidationType(EValidationType.END_WIDTH, end, error)
+    EndWidth(end:string,error="ต้องลงท้ายด้วย "){
+        let v = new CValidationType(EValidationType.END_WIDTH, end, error+end)
         this.AllValidation?.push(v);
         return this;
     }
