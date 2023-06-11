@@ -100,7 +100,6 @@ class CValidation {
                     break;
             }
         });
-        console.log(value, this.AllValidation)
         let isValid = error.length === 0;
         return { isValid, error }
     }
