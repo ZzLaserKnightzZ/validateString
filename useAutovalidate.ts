@@ -18,7 +18,7 @@ class CValidationType {
     }
 }
 
-class Validation {
+class CValidation {
 
     private AllValidation?: CValidationType[] = [];
    
@@ -106,7 +106,7 @@ class Validation {
     }
 }
 
-const useAutoValidate = (validate: Validation) => {
+const useAutoValidate = (validate: CValidation) => {
 
 
     const [value, setValue] = useState("");
